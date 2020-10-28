@@ -7,14 +7,14 @@
 
 
 # Our Primary Goals:
-## Launch a Name-node and a Data-node of AWS cloud.
-## Create an EBS volume of 1 Gib and Attach it to Data-Node
-## Make sure to install Hadoop software and JDK software in both the nodes.
-## Create Partition(s) in attached volume.
-## Format it and finally mount it on the Data-node Directory
-## Setup the Name-node and Data-node
-## Contribute Limited Storage from Data-node to Hadoop Cluster.
-## assuming that you have some basic knowledge about Hadoop cluster and Cloud Computing as a prerequisite.
+## >> Launch a Name-node and a Data-node of AWS cloud.
+## >> Create an EBS volume of 1 Gib and Attach it to Data-Node
+## >> Make sure to install Hadoop software and JDK software in both the nodes.
+## >> Create Partition(s) in attached volume.
+## >> Format it and finally mount it on the Data-node Directory
+## >> Setup the Name-node and Data-node
+## >> Contribute Limited Storage from Data-node to Hadoop Cluster.
+## >> assuming that you have some basic knowledge about Hadoop cluster and Cloud Computing as a prerequisite.
 # First of I have launched 2 instances with RedHat Linux Image of Amazon with 10Gib EBS Storage in North Virginia region.
 ![](https://miro.medium.com/max/875/1*JUyh3jZa_f9VVuDUR2SIow.png)
 
@@ -65,10 +65,10 @@
 ![](https://miro.medium.com/max/875/1*jugVWtfHF2Zyj684qWDk0A.png)
 
 # <p align="center">core-site.xml file of Datanode</p>
-```Atlast, start the service of datanode also.
-Finally, Our all configurations are completed here.
-Now by command hadoop dfsadmin -report ,We can see the status of hadoop cluster. This Command can be run from any of the node.
-Finally,we have set the limitation to data-node storage size.```
+## Atlast, start the service of datanode also.
+# Finally, Our all configurations are completed here.
+# *Now by command hadoop dfsadmin -report ,We can see the status of hadoop cluster. This Command can be run from any of the node.*
+# `Finally,we have set the limitation to data-node storage size.`
 ![](https://miro.medium.com/max/875/1*-y0ZmXyp2phdtJDMkLbN5Q.png)
 
 # <p align="center">report of hadoop cluster</p>
