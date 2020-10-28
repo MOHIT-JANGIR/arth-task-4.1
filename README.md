@@ -14,7 +14,7 @@
 ## >> Format it and finally mount it on the Data-node Directory
 ## >> Setup the Name-node and Data-node
 ## >> Contribute Limited Storage from Data-node to Hadoop Cluster.
-## >> assuming that you have some basic knowledge about Hadoop cluster and Cloud Computing as a prerequisite.
+##  assuming that you have some basic knowledge about Hadoop cluster and Cloud Computing as a prerequisite.
 # First of I have launched 2 instances with RedHat Linux Image of Amazon with 10Gib EBS Storage in North Virginia region.
 ![](https://miro.medium.com/max/875/1*JUyh3jZa_f9VVuDUR2SIow.png)
 
@@ -59,7 +59,7 @@
 # <p align="center">hdfs-site.xml file of Namenode</p>
 ![](https://miro.medium.com/max/875/1*cIKza8mFfEgmMR8YMKBVHg.png)
 
-# <p align="center">core-site.xml file of Datanode</p>
+# <p align="center">core-site.xml file of Namenode</p>
 # Remember, In Namenode we have we have to format /nn directory we created and After that start the service of NameNode using hadoop-daemon.sh start namenode.
 # `Now we have to also configure the same files in Datanode also in the similar way, just remember to give IP of Name-node in core-site.xml file.`
 ![](https://miro.medium.com/max/875/1*jugVWtfHF2Zyj684qWDk0A.png)
