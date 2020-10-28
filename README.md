@@ -13,29 +13,33 @@ Setup the Name-node and Data-node
 Contribute Limited Storage from Data-node to Hadoop Cluster.
 🎇I hereby assume that you have some basic knowledge about Hadoop cluster and Cloud Computing.
 🎇First of I have launched 2 instances with RedHat Linux Image of Amazon with 10Gib EBS Storage in North Virginia region.
-![](https://miro.medium.com/max/875/1*juzohagJMQ9tKIOjNDyaOA.jpeg)
+![](https://miro.medium.com/max/875/1*JUyh3jZa_f9VVuDUR2SIow.png)
+
 Instances Launched.
 🎇After the instances are launched to do remote login I used PuTTY software.
 🎇Now after this we will create EBS volume of 1GiB by clicking on Volumes in AWS Console. I named it slave-volume. Notice here the 2 volumes of 10GiB are Root Volumes.
-![](https://miro.medium.com/max/875/1*JUyh3jZa_f9VVuDUR2SIow.png)
+![](https://miro.medium.com/max/875/1*PXUHxaRXuAVkmzi3NSamlQ.png)
+
 Slave Volume Created.
 🎇Now, We will attach our slave-volume to our datanode instance running. It is just like we insert pendrive in our local system or we create a virtual harddisk and attach to it. Mainly we have to give the instance id only while attaching.
 🎇Attaching the volume is so simple, we just need to select that volume first, click on Actions Button and after that we have to provide instance id.
-![](https://miro.medium.com/max/875/1*PXUHxaRXuAVkmzi3NSamlQ.png)
+![](https://miro.medium.com/max/875/1*7j0sZuMeeCbu60Nvxw1deQ.png)
+
 After attaching
 🎇After attaching volume to data-node we can see that volume is in in-use status.
 🎇As we remotely logged in data-node instance previously, now we can see similar linux terminal and to confirm that EBS volume we created or not we can use fdisk -l command.
-![](https://miro.medium.com/max/875/1*7j0sZuMeeCbu60Nvxw1deQ.png)
+![](https://miro.medium.com/max/875/1*f2_NsUvtB_xl0og1nUaXzA.png)
 
 Volume is attached.
 🎇Now the main concept of Partitions come into play. To share limited storage we are going to create partition in that 1GiB volume attached. Here we created partition of 512M(512 MiB). Here We can see the device /dev/xvdf1 created
-![](https://miro.medium.com/max/875/1*f2_NsUvtB_xl0og1nUaXzA.png)
+![](https://miro.medium.com/max/875/1*A7C3FYf_-46tzm2lC5_WHQ.png)
+
 
 partition Created.
 🎇Now we know we share the storage of Data-node to Name-Node to solve problem of storage we have in BigData. So, For storing any data in this partition, we have to first Format it.
 🎇To format that partition we created we need to run a command.
 mkfs.ext4 /dev/xvdf1
-![](https://miro.medium.com/max/875/1*A7C3FYf_-46tzm2lC5_WHQ.png)
+![](https://miro.medium.com/max/875/1*fegNOfdR5PiltBhZ5MPbxA.png)
 Formatted.
 🎇Now, We have to mount it on the same directory of data-node we will be using in Hadoop Cluster.
 🎇To mount the partition on desired directory, we have to run the following command:
