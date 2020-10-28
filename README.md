@@ -40,26 +40,28 @@ Formatted.
 🎇Now, We have to mount it on the same directory of data-node we will be using in Hadoop Cluster.
 🎇To mount the partition on desired directory, we have to run the following command:
 mount /dev/xvdf1 /dn2
-![](https://miro.medium.com/max/875/1*fegNOfdR5PiltBhZ5MPbxA.png)
+![](https://miro.medium.com/max/875/1*ayH3PPSWSTVCzgt8QUDqHg.png)
 
 🎇After mounting we can confirm or see the size using df -hT command.
-![](https://miro.medium.com/max/875/1*ayH3PPSWSTVCzgt8QUDqHg.png)
+![](https://miro.medium.com/max/875/1*4S9c4Ldbs8qD02mge2dc7Q.png)
+
 🎇Here all the steps of partitioning and mounting are completed.
 🎇Now we have to configure the hdfs-site.xml file and core-site.xml file in Name-node and Data-node.
-![](https://miro.medium.com/max/875/1*4S9c4Ldbs8qD02mge2dc7Q.png)
-hdfs-site.xml file of Namenode
 ![](https://miro.medium.com/max/875/1*sauRAjW6kNywA_hBowbQkA.png)
+
+hdfs-site.xml file of Namenode
+![](https://miro.medium.com/max/875/1*cIKza8mFfEgmMR8YMKBVHg.png)
 
 core-site.xml file of Datanode
 🎇Remember, In Namenode we have we have to format /nn directory we created and After that start the service of NameNode using hadoop-daemon.sh start namenode.
 🎇Now we have to also configure the same files in Datanode also in the similar way, just remember to give IP of Name-node in core-site.xml file.
-![](https://miro.medium.com/max/875/1*cIKza8mFfEgmMR8YMKBVHg.png)
+![](https://miro.medium.com/max/875/1*jugVWtfHF2Zyj684qWDk0A.png)
 
 core-site.xml file of Datanode
 🎇Atlast, start the service of datanode also.
 🎇Finally, Our all configurations are completed here.
 🎇Now by command hadoop dfsadmin -report ,We can see the status of hadoop cluster. This Command can be run from any of the node.
 🎇Finally,we have set the limitation to data-node storage size.
-![](https://miro.medium.com/max/875/1*jugVWtfHF2Zyj684qWDk0A.png)
+![](https://miro.medium.com/max/875/1*-y0ZmXyp2phdtJDMkLbN5Q.png)
 
 report of hadoop cluster.
