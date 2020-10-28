@@ -1,8 +1,10 @@
 # Contributing Limited Amount of Data-Node Storage to Hadoop Cluster
+![](https://miro.medium.com/max/875/1*-y0ZmXyp2phdtJDMkLbN5Q.png)
 Hello All👋,
 🎇After Reading this article you will come to know how to contribute limited storage from data-node to Hadoop Cluster. I have done all the setup on AWS cloud so, No Need to worry about the resources such as RAM, CPU etc.
 So Without any further Delay, Let’s Get Started.
 ![](https://miro.medium.com/max/875/1*EfM2GIjSp5YHvBfFx2bsoA.png)
+
 🎇Our Primary Goals:
 Launch a Name-node and a Data-node of AWS cloud.
 Create an EBS volume of 1 Gib and Attach it to Data-Node
